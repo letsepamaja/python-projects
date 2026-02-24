@@ -1,0 +1,23 @@
+#validate username
+#must not contain digits
+#must not contain more than 1 space
+#must not contain more that 12 characters
+#username = input('enter your username: ').capitalize()
+#while len(username) > 12:
+#   print('username characters must not exceed 12 characters')
+#    username = input('enter your username: ').capitalize()
+#while any(char.isdigit() for char in username):
+#    print('username characters must not contain didgits')
+#    username = input('enter your username: ').capitalize()
+#while username.count(' ') > 1:
+#    print('username characters must not contain more than 1 spaces')
+#    username = input('enter your username: ')
+#else:
+#    print(f'welcome {username}')
+
+""""OR (SHORTER) """
+
+username = input('enter a username: ').capitalize()
+result = f'hello {username}' if len(username) <= 12 and username.replace(' ','').isalpha() and  username.count(' ') <= 1 else 'invalid username'
+print(result)
+    

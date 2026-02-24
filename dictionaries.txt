@@ -1,0 +1,9 @@
+# dictionaries 
+#get update pop popitem keys values items
+
+cities = {"Western Cape":'Cape Town',
+          "Eastern Cape":'Maclear',
+          'Gauteng':'Soweto',
+          'KZN':'Jozini'}
+for key, values in cities.items():
+    print(f'{key}:{values}')

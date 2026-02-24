@@ -1,0 +1,37 @@
+import random
+lowest_number = 1 
+highest_number = 20
+guesses = 0
+answer = random.randint(lowest_number, highest_number)
+print('welcome to pyhton guessing number game'.upper())
+print()
+print(f'Select a number between {lowest_number} and {highest_number}')
+is_running = True
+while is_running:
+    guess = input('enter a guess: ')
+    
+    if guess.isdigit():
+        guess = int(guess)
+        guesses += 1 
+         
+         
+        if guess < lowest_number or guess > highest_number:
+            print('that number is our of range')
+            print(f'please select a number between {lowest_number} and {highest_number}')
+        elif guess < answer:
+            print("that's too low!.. Try again")
+        elif guess > answer:
+            print("that's too high!.. Try again")
+        
+        else:
+            print()
+            print('congratulations'.upper())
+            print(f"that's the correct answer, the answer was: {answer}")
+            print('________________________________________________')
+            print(f'number of guesses: {guesses}')
+            is_running = False
+    else:
+        print('enter a valid value')
+        print(f'please select a number between {lowest_number} and {highest_number}')
+        
+            

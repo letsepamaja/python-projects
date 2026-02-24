@@ -1,0 +1,23 @@
+# weight converter 
+weight = input('enter your weight: ')
+while not weight.isdigit():
+    print('please enter weight in numbers')
+    weight = input('enter your weight: ')
+weight = float(weight)
+
+unit = input('enter unit measurement (Lb / Kg): ')
+while not unit.isalpha():
+    print('please enter weight in numbers')
+    unit = input('enter unit measurement (Lb / Kg): ')
+
+while unit.lower() not in ('lb', 'kg'):
+    print('please enter a correct unit: ')
+    unit = input('enter unit measurement (Lb / Kg): ')
+
+if unit.lower() == 'lb':
+    print(f'Your weight when converted to kilograms is: {round(weight / 2.2, 2)}kg')
+else:
+    print(f'Your weight when converted to pounds is: {round(weight * 2.2, 2)}lb')
+
+    
+

@@ -1,0 +1,15 @@
+#validate username
+#must not contain digits
+#must not contain spaces
+#username = input('enter a username: ').capitalize()
+#result = f'hello {username}' if len(username) <= 12 and username.replace(' ', '').isalpha() and username.count(' ') <= 1 else 'invalid username'
+#print(result)
+username = input('enter a username: ').capitalize()
+if len(username) > 12:
+     print('username characters cannot exceed 12 ')
+elif any(char.isdigit() for char in username):
+    print('username must not contain digits')
+elif username.count(' ') > 1:
+    print('username must contain 1 space')
+else:
+    print(f'welcome {username}')

@@ -1,0 +1,57 @@
+#2D collection
+# initial projet
+numb_pad  = ((1, 2, 3),
+             (4, 5, 6), 
+             (7, 8, 9), 
+             ('*', 0, '#' ))
+for rows in numb_pad:
+    for colomns in rows:
+        print(colomns, end=" ")
+    print()
+# practice
+name = input('enter your name: ')
+print()
+sign = input('uthixo afake ntoni kwiimini ozonxila ngazo ngo december?: ')
+print()
+print(' iimini endizonxila ngazo ngo december'.upper())
+print()
+arow =  (1, 2, 3, 4, 5, 6, 7)
+brows = (sign,  sign,  sign,  sign,  sign,  sign,  sign)
+crows = (8, 9, 10, 11, 12, 13, 14)
+drows = (sign,  sign, '', sign, '',  sign, '', sign, '', sign, '',  sign)
+erows = (15, 16, 17, 18, 19, 20, 21)
+frows = (sign, '', sign, '', sign, '',  sign, '', sign, '', sign, '',  sign)
+grows = (22, 23, 24, 25, 26, 27 ,28)
+hrows = (sign, '', sign, '', sign, '',  sign, '', sign, '', sign, '',  sign)
+irows = (29, 30, 31)
+jrows = (sign, '',   sign, '',   sign)
+
+results = [
+    arow,
+    brows,
+    '',
+    crows,
+    drows,
+     '',
+    erows,
+    frows,
+    '',
+    grows, 
+    hrows,
+    '',
+    irows, 
+    jrows, 
+]
+
+for row in results:
+    for items in row: 
+        print(items, end=" ")
+    print()
+print()
+print('uthixo akaxoki but umbuzo umile!'.upper())
+print()
+umbuzo = input('UMBUZO: do you receive? yes or no : ')
+if umbuzo.lower() == 'yes':
+    print(f"Ude uthi 'yes' ulinxila {name} ")
+else:
+    print('uzonxila ngenkani, ku late ngok! ')

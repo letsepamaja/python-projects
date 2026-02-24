@@ -1,0 +1,49 @@
+# calculating a compound interest 
+#principle = 0
+#rate = 0
+#time = 0
+#while principle <= 0:
+#    principle = float(input('enter your principle amount: '))
+#    if principle <= 0:
+#        print('the principle amount cannot be less or equal zero')
+#while rate <= 0:
+#    rate = float(input('enter the interest rate: '))
+#    if rate <= 0:
+#        print('the interest rate cannot be equal or less than zero')
+#while time <= 0:
+#    time = int(input('enter the period of the interest in years: '))
+#    if time <= 0:
+#        print('the period of time cannot be equal or less than zero')
+#calculations = principle * pow((1 + rate / 100), time)
+#print(f'your balance now after {time} year/s of investing is: R{calculations:,.2f}')
+
+""""another method using boolian operator"""
+principle = 0 
+rate = 0 
+time = 0 
+
+while True:
+    principle = float(input('enter the principle amount:'))
+    if principle < 0:
+        print('principle amount cannot be less than zero')
+    else:
+        break
+while True:
+    rate = float(input('enter the interest rate: '))
+    if rate < 0:
+        print('interest rate cannot be less than zero')
+    else:
+        break
+while True:
+    time = int(input('enter the period of time of the investment in years: '))
+    if time < 0:
+        print('time cannot be less than 0')
+    else:
+        break
+    
+print("")
+calculations = principle * pow((1 + rate / 100), time)
+print(f'your balance after {time} year/s of investment is: R{calculations:,.2f}')
+print("")
+closing_statement = 'thank you for trusting us with your money!'.upper()
+print(closing_statement)

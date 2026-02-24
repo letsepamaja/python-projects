@@ -1,0 +1,13 @@
+import random
+#number = random.randint(1, 6)
+#print(number)
+#option = ('rock', 'paper', 'scissors')
+#print(random.choice(option))
+#low = 1
+#high = 6
+#number = random.randint(low, high)
+#number = random.random()
+#print(number)
+number = ['2', '3', 'q', 'j', '6', '10', '7','A']
+random.shuffle(number)
+print(number)

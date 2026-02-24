@@ -1,0 +1,43 @@
+#for loops
+name = input('what is your name?: ')
+while not name.isalpha():
+    print('name cannot contain digits')
+    name = input('what is your name?: ')
+while True:
+    surname = input('what is your surname?: ')
+    if not surname.isalpha():
+        print('surname cannot contain digits')
+    else:
+        break
+    
+import time 
+my_time = int(input('enter time in seconds: '))
+for x in range(my_time, 0, -1):
+    seconds = x % 60                           
+    minutes = int(x / 60) % 60
+    hours = int(x / 3600) % 60
+    print(f'{hours:02}:{minutes:02}:{seconds:02}')
+    time.sleep(1)
+print()
+print()
+#print()
+print(f'happy new year {name} !!!'.upper())
+birth_year = 0
+current_year = 0
+while True:
+    birth_year = input('enter birth_year: ')
+    if not birth_year.isdigit():
+        print('birth year cannot contain words: ')
+    else:
+        break
+current_year = input('what is the current year?: ')
+while not current_year.isdigit():
+    print('current year cannot contain words')
+    current_year = input('what is the current year?: ')
+    
+age = int(current_year) - int(birth_year)
+print()
+print(f"this year you will be turning {age} years old!")
+
+
+  

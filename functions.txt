@@ -1,0 +1,29 @@
+# functions
+#def happy_birthday(name, age, day):
+#    print(f'happy birthday {name}!')
+#    print(f'you are {age} years old')
+#    print(f'have a nice {day}')
+#    print()
+#happy_birthday('bro', 12, 'tuesday')
+
+#def display_invoice(name, amount, date):
+#    print(f'hello {name}')
+#    print(f'your amount of: R{amount:,.2f} is due on {date} ')
+#    print()
+#display_invoice('Lebo', 38680, '01/ 12')
+
+def add(x, y):
+    z = x + y 
+    return z
+
+def subtract(x, y):
+    z = x - y 
+    return z
+def multiply(x, y):
+    z = x * y 
+    return z
+def divide(x, y):
+    z = x / y 
+    return z
+
+print(subtract(18, 2))

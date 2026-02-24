@@ -1,0 +1,61 @@
+# quiz game 
+questions = ()
+guesses = []
+options = ()
+answers = ()
+question_numb = 0
+score = 0
+
+questions = ('how many days are in a year?: ',
+             'how many bones does a human body have?: ',
+             'how many days are in a week?: ',
+             'how many seconds make up a day?: ',
+             'what is the boiling point of water in celcius?: ')
+            
+
+options = (('A. 264 ', 'B. 365 ', 'C. 100 ','D. 560 '),
+           ('A. 206 ', 'B. 200 ', 'C. 207 ','D. 208 '),
+           ('A. 6 ', 'B. 7 ', 'C. 5 ','D. 8 '),
+           ('A. 24 ', 'B. 3600 ', 'C. 4200 ','D. 60 '),
+           ('A. 100 ', 'B. 500 ', 'C. 99 ','D. 150 '))
+answers = ('B', 'A', 'B','B', 'A')
+for question in questions:
+    print('-----------------------')
+    print(question)
+    for option in options[question_numb]:
+        print(option)
+    guess = input('enter the correct answer between (A, B, C, D): ').upper()
+    guesses.append(guess)
+    if guess == answers[question_numb]:
+        score += 1
+        print('CORRECT!')
+    else:
+        print('INCORRECT!')
+        print(f'the correct answer is {answers[question_numb]}')
+
+    question_numb += 1
+print('-----------------------')
+print('             results              '.upper())
+print('-----------------------')
+print('your guesses: ', end='')
+for guess in guesses:
+    print(guess, end=' ')
+print()
+print()
+print('memo'.upper())
+print('the correct answers: ', end='')
+for answer in answers:
+    print(answer, end=' ')
+print()
+print()
+
+score = int(score / len(questions) * 100)
+
+print(f'your score is: {score}%')
+
+if score < 50:
+    print('failed'.upper())
+else:
+    print('passed'.upper())
+    print()   
+    print('congratulations !'.upper())
