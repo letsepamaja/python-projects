@@ -1,27 +1,39 @@
-# manual calculator
-numb1 = input('enter the first number: ')
-while not numb1.isdigit():
-    print('calculator cannot read words ')
-    numb1 = input('enter the first number: ')
-numb1 = int(numb1)
-function = input('enter the function between (*, /, +, -): ')
-while function not in ['-', '+', '/', '*']:
-    print('please enter the correct function')
-    function = input('enter the function between (*, /, +, -): ') 
-numb2 = input('enter the second number: ')
-while not numb2.isdigit():
-    print('calculator cannot read words ')
-    numb1 = input('enter the first number: ')
-numb2 = int(numb2)
-if function == "-":
-    result = numb1 - numb2
-elif function == '+':
-    result = numb1 + numb2
-elif function == '/':
-    result = numb1 / numb2
-elif function == '*':
-    result = numb1 * numb2
-print(result)
+is_running = True
 
+while is_running:
+    numb1 = input('Enter the first number: ')
+    while not numb1.replace('.', '', 1).isdigit():
+        print('Calculator cannot read words')
+        numb1 = input('Enter the first number: ')
+    numb1 = float(numb1)
 
+    function = input('Enter the function between (*, /, +, -): ')
+    while function not in ['-', '+', '/', '*']:
+        print('Please enter the correct function')
+        function = input('Enter the function between (*, /, +, -): ')
 
+    numb2 = input('Enter the second number: ')
+    while not numb2.replace('.', '', 1).isdigit():
+        print('Calculator cannot read words')
+        numb2 = input('Enter the second number: ')
+    numb2 = float(numb2)
+
+    if function == "-":
+        result = numb1 - numb2
+    elif function == '+':
+        result = numb1 + numb2
+    elif function == '/':
+        if numb2 == 0:
+            print("Cannot divide by zero!")
+            continue
+        result = numb1 / numb2
+    elif function == '*':
+        result = numb1 * numb2
+
+    print("Result:", result)
+
+    again = input('Wanna count again? (y/n): ')
+    if again.lower() != 'y':
+        is_running = False
+
+print('THANK YOU FOR USING THE MANUAL CALCULATOR')
