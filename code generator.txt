@@ -1,0 +1,49 @@
+
+import random
+import time
+print('CODE GENERATOR') 
+print()
+lowest_number = 000
+highest_number = 999
+code = random.randint(lowest_number, highest_number)
+#print(code)
+employed = True
+while employed:
+    name = input('enter your first_name: ')
+    surname = input('enter your last_name: ')
+    profession = input('enter your profession: ')
+    if not name.isalpha() or not surname.isalpha() or not profession.isalpha():
+        print('please enter those in words only')
+    else:
+        break
+employed = False
+
+def loading():
+    print("Generating your code...")
+    for _ in range(3):
+        print("Loading.", end="\r")
+        time.sleep(0.3)
+        print("Loading..", end="\r")
+        time.sleep(0.3)
+        print("Loading...", end="\r")
+        time.sleep(0.3)
+
+# Dictionary for roles
+roles = {
+    "lebohang": "MAN",
+    "letsepa": "ARC",
+    "malereku": "CEO",
+    "lereku": "ENG",
+    "tsepang": "EDU",
+    "thatsi": "FOR"
+}
+
+name_lower = name.lower()
+
+if name_lower in roles:
+    loading()
+    print(f"\nYour code is {roles[name_lower]}{code}")
+else:
+    print("Employee not found")
+
+
