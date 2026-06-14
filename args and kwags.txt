@@ -1,0 +1,25 @@
+#kwargs
+def display_address(*args, **kwargs):
+    for arg in args:
+        print(arg, end='')
+    print()
+    if 'apt'in kwargs:
+        print(f"{kwargs.get('apt')}")
+    elif 'wifi' in kwargs:
+        print(f'{kwargs.get('wifi')}')
+    else:
+        print(f"{kwargs.get('houseno')}"), 
+        print(f"{kwargs.get('street')}"), 
+        print(f"{kwargs.get('surbab')}"), 
+        print(f"{kwargs.get('city')}")
+
+display_address('Dr',' lucia',' cloud',' engineer',
+        houseno='4847',
+        street='lihhla cres',
+        surbab='usa',
+#        apt='#100',
+#        wifi='ikeja',
+        city='north town',
+        zipcode='7567')
+
+    
