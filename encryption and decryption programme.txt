@@ -1,0 +1,27 @@
+import random
+import string
+chars = ' ' + string.punctuation + string.digits + string.ascii_letters
+chars = list(chars)
+key = ''
+key = chars.copy()
+random.shuffle(key)
+#print(key)
+cipher_text = ''
+print('ECRYPTION')
+message = input('enter a message: ')
+for letter in message:
+    index = chars.index(letter)
+    cipher_text += key[index]
+print(f'original text: {message}')
+print(f'encryped text text: {cipher_text}')
+print()
+print('DECRYPTION')
+cipher_text = input('enter a message: ')
+message = ''
+for letter in cipher_text:
+    index = key.index(letter)
+    message += chars[index]
+print()
+print(f'encryped text text: {cipher_text}')
+print(f'original text: {message}')
+lo
