@@ -1,0 +1,37 @@
+import random
+symbols = ['🐷', '🐓', '🐄']
+def spin_reel():
+    reel1 = random.choice(symbols)
+    reel2 = random.choice(symbols)
+    reel3 = random.choice(symbols)
+    print(reel1, reel2, reel3)
+    return reel1, reel2, reel3
+balance = float(input("Enter money to play with: R"))
+is_running = True
+while is_running:
+    spin = input('want to spin for R10 and stand a chance to win  prize? Y/N:  ').lower()
+    if spin == 'y':
+        balance -= 10
+        print('- R10 for spinning')
+        reel1, reel2, reel3 = spin_reel()
+        if reel1 == reel2 == reel3:
+            print('you won a jackpot')
+            balance += 50
+            print('your balance after this round is: R', balance)
+#        elif reel1 == reel2 or reel3 ==  reel1 or reel2 == reel3:
+#            balance += 5
+#            print('you won')
+#            print('your current balance is: R', balance)
+        elif balance < 20:
+            print('insuficient funds')
+            break
+        else:
+            balance -= 10
+            print('you lost')
+            print('your current balance is: R', balance)
+    elif spin == 'n':
+        is_running = False
+    else:
+        print('invalid input')
+print('game over')
+    
