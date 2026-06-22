@@ -2,7 +2,7 @@
 
 # dictionaries
 menu = {'hamper': 320.00,
-        'fisho_il': 78.00,
+        'fisho_oil': 78.00,
         'meat': 200.00,
         'sausage': 150,
         'spice': 50.00,
